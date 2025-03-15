@@ -47,6 +47,7 @@ int main()
         close(server_fd);
         exit(EXIT_FAILURE);
     }
+    printf("Server listening on port: %d\n", PORT);
 
     // accept
     if((client_fd = accept(server_fd, (struct sockaddr *)&server_address, (socklen_t *)&server_address_lenght)) < 0)
